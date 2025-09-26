@@ -31,7 +31,7 @@ def ogg_to_mp3(path):
 		pass
 	else:
 		os.mkdir('export')
-	if not glob.glob('*.mp3'):
+	if not glob.glob('*.ogg'):
 		raise FileNotFoundError(f'No ogg files found on {path}')
 		sys.exit(1)
 	for i in os.listdir():
@@ -77,6 +77,3 @@ else:
 		
 finally:
 	print("Program finalized.")
-
-		
-		
