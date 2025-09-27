@@ -23,7 +23,7 @@ def mp3_to_ogg(path):
 			elif ext !='.mp3':
 				print("Skipping not mp3 files...")
 			else:
-				converter(name,ext,path,"ogg")
+				converter(name,ext,path,"ogg","mp3")
 
 def ogg_to_mp3(path):
 	ogglsit = os.chdir(path) 
@@ -31,7 +31,7 @@ def ogg_to_mp3(path):
 		pass
 	else:
 		os.mkdir('export')
-	if not glob.glob('*.mp3'):
+	if not glob.glob('*.ogg'):
 		raise FileNotFoundError(f'No ogg files found on {path}')
 		sys.exit(1)
 	for i in os.listdir():
@@ -44,7 +44,7 @@ def ogg_to_mp3(path):
 			elif ext !='.ogg':
 				print("Skipping not ogg files...")
 			else:
-				converter(name,ext,path,"mp3")
+				converter(name,ext,path,"mp3","ogg")
 
 		    	
 try:
