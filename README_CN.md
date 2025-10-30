@@ -6,32 +6,64 @@
 
 ## 安装
 
-### 方法 1：安装为命令行工具（推荐）
+### 快速开始（推荐）
+
+**Windows 用户：**
+1. 双击运行 `install.bat`（会自动安装所有依赖和工具）
+2. 完成后即可在任何位置使用 `audio-converter` 命令
+
+**其他系统：**
 ```bash
-# 进入项目目录
+# 1. 进入项目目录
 cd mp3-to-ogg-py
 
-# 以开发模式安装（可编辑）
+# 2. 安装依赖
+pip install -r requirements.txt
+
+# 3. 安装命令行工具
 pip install -e .
-
-# 或者正常安装
-pip install .
 ```
 
-安装完成后，你可以在任何位置使用 `audio-converter` 命令：
-```bash
-audio-converter
-```
+### 详细安装方法
 
-### 方法 2：直接运行
-```bash
-python3 mp3_to_ogg.py
-```
-
-### 方法 3：使用安装脚本（Windows）
+#### 方法 1：一键安装（Windows）
 双击运行 `install.bat` 或在命令行中执行：
 ```bash
 install.bat
+```
+这个脚本会自动：
+- ✅ 安装所有 Python 依赖库
+- ✅ 安装命令行工具
+- ✅ 提示你安装 FFmpeg
+
+#### 方法 2：手动安装依赖 + 安装工具
+```bash
+# 步骤 1: 安装依赖库
+pip install -r requirements.txt
+
+# 步骤 2: 安装为命令行工具（开发模式）
+pip install -e .
+
+# 或者正式安装
+pip install .
+```
+
+#### 方法 3：只安装依赖，直接运行脚本
+如果你不想安装命令行工具，只想直接运行脚本：
+
+**Windows:**
+```bash
+# 双击运行或执行
+install_dependencies.bat
+```
+
+**其他系统:**
+```bash
+# 安装依赖
+pip install -r requirements.txt
+
+# 直接运行脚本
+python3 mp3_to_ogg.py
 ```
 
 ## 使用方法
@@ -126,15 +158,18 @@ pip uninstall audio-converter-cli
 
 ```
 mp3-to-ogg-py/
-├── mp3_to_ogg.py      # 主程序文件
-├── exporters.py       # 转换器模块
-├── setup.py           # 安装配置（传统）
-├── pyproject.toml     # 项目配置（现代）
-├── install.bat        # Windows 安装脚本
-├── uninstall.bat      # Windows 卸载脚本
-├── README.md          # 英文说明文档
-├── README_CN.md       # 中文说明文档
-└── LICENSE            # GPL v3 许可证
+├── mp3_to_ogg.py              # 主程序文件
+├── exporters.py               # 转换器模块
+├── requirements.txt           # Python 依赖列表
+├── setup.py                   # 安装配置（传统）
+├── pyproject.toml             # 项目配置（现代）
+├── install.bat                # Windows 一键安装脚本
+├── install_dependencies.bat   # Windows 依赖安装脚本
+├── uninstall.bat              # Windows 卸载脚本
+├── README.md                  # 英文说明文档
+├── README_CN.md               # 中文说明文档
+├── .gitignore                 # Git 忽略文件配置
+└── LICENSE                    # GPL v3 许可证
 ```
 
 ## 使用示例

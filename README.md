@@ -6,32 +6,64 @@ English | [简体中文](README_CN.md)
 
 ## Installation
 
-### Method 1: Install as a command-line tool (Recommended)
+### Quick Start (Recommended)
+
+**Windows users:**
+1. Double-click `install.bat` (automatically installs all dependencies and tools)
+2. Use `audio-converter` command from anywhere
+
+**Other systems:**
 ```bash
-# Navigate to the project directory
+# 1. Navigate to the project directory
 cd mp3-to-ogg-py
 
-# Install in development mode (editable)
+# 2. Install dependencies
+pip install -r requirements.txt
+
+# 3. Install CLI tool
+pip install -e .
+```
+
+### Detailed Installation Methods
+
+#### Method 1: One-click install (Windows)
+Double-click `install.bat` or run in command line:
+```bash
+install.bat
+```
+This script will automatically:
+- ✅ Install all Python dependencies
+- ✅ Install the CLI tool
+- ✅ Remind you to install FFmpeg
+
+#### Method 2: Manual installation
+```bash
+# Step 1: Install dependencies
+pip install -r requirements.txt
+
+# Step 2: Install as CLI tool (development mode)
 pip install -e .
 
 # Or install normally
 pip install .
 ```
 
-After installation, you can use the `audio-converter` command from anywhere:
+#### Method 3: Install dependencies only, run script directly
+If you don't want to install the CLI tool and just want to run the script:
+
+**Windows:**
 ```bash
-audio-converter
+# Double-click or run
+install_dependencies.bat
 ```
 
-### Method 2: Run directly
+**Other systems:**
 ```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Run script directly
 python3 mp3_to_ogg.py
-```
-
-### Method 3: Using install script (Windows)
-Double-click `install.bat` or run in command line:
-```bash
-install.bat
 ```
 
 ## Usage
