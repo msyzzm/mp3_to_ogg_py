@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "audio-converter-cli"
+version = "1.0.0"
+description = "A simple command-line tool to convert between MP3 and OGG audio formats"
+readme = "README.md"
+requires-python = ">=3.6"
+license = {text = "GPL-3.0"}
+authors = [
+    {name = "Your Name", email = "your.email@example.com"}
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+    "Environment :: Console",
+    "Topic :: Multimedia :: Sound/Audio :: Conversion",
+]
+dependencies = [
+    "pydub>=0.25.1",
+    "progress>=1.6",
+]
+
+[project.scripts]
+audio-converter = "mp3_to_ogg:main"
+
+[project.urls]
+Homepage = "https://github.com/yourusername/mp3-to-ogg-py"
+
