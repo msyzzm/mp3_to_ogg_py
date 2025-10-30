@@ -1,5 +1,8 @@
 # mp3-to-ogg-py
+
 A conversion tool for export mp3 files as ogg, and vice versa
+
+English | [简体中文](README_CN.md)
 
 ## Installation
 
@@ -23,6 +26,12 @@ audio-converter
 ### Method 2: Run directly
 ```bash
 python3 mp3_to_ogg.py
+```
+
+### Method 3: Using install script (Windows)
+Double-click `install.bat` or run in command line:
+```bash
+install.bat
 ```
 
 ## Usage
@@ -67,16 +76,53 @@ Same as option 1 but for ogg files - supports both directory and single file pat
 ### Option 3: Exit
 Exits the program.
 
+## Features
+
+✅ **Bidirectional conversion** - Supports MP3 ↔ OGG conversion
+✅ **Batch processing** - Convert all files in a directory at once
+✅ **Single file conversion** - Convert individual files
+✅ **Smart skip** - Automatically skips already converted files
+✅ **Cross-platform** - Works on Windows, Linux, and macOS
+✅ **Progress indicator** - Shows progress animation during conversion
+✅ **CLI tool** - Can be called from anywhere after installation
+
 ## Requirements
 - Python 3.6+
 - pydub
 - progress
 - ffmpeg (required by pydub for audio conversion)
 
+### Installing FFmpeg
+
+**Windows:**
+1. Download from [FFmpeg official website](https://ffmpeg.org/download.html)
+2. Extract and add to system PATH
+
+**macOS:**
+```bash
+brew install ffmpeg
+```
+
+**Linux (Ubuntu/Debian):**
+```bash
+sudo apt-get install ffmpeg
+```
+
 ## Uninstall
+
+Using uninstall script (Windows):
+```bash
+uninstall.bat
+```
+
+Or manually:
 ```bash
 pip uninstall audio-converter-cli
 ```
+
+## License
+
+This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details
 
 
 
